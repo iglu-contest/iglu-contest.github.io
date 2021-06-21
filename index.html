@@ -1,0 +1,596 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>IGLU: Grounded Language Understanding in Minecraft &mdash; IGLU  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="iglu package" href="auto/iglu.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> IGLU
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="auto/iglu.html">iglu package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto/iglu.tasks.html">iglu.tasks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto/modules.html">iglu</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">IGLU</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>IGLU: Grounded Language Understanding in Minecraft</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="iglu-grounded-language-understanding-in-minecraft">
+<h1>IGLU: Grounded Language Understanding in Minecraft<a class="headerlink" href="#iglu-grounded-language-understanding-in-minecraft" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/bell.png"><img alt="" src="_images/bell.png" style="width: 120.0px; height: 120.0px;" /></a>
+<a class="reference internal image-reference" href="_images/L.png"><img alt="" src="_images/L.png" style="width: 120.0px; height: 120.0px;" /></a>
+<a class="reference internal image-reference" href="_images/heart.png"><img alt="" src="_images/heart.png" style="width: 120.0px; height: 120.0px;" /></a>
+<a class="reference internal image-reference" href="_images/Ls.png"><img alt="" src="_images/Ls.png" style="width: 120.0px; height: 120.0px;" /></a>
+<div class="section" id="what-is-iglu">
+<h2>What is IGLU?<a class="headerlink" href="#what-is-iglu" title="Permalink to this headline">¶</a></h2>
+<p>IGLU is a research project aimed at bridging the gap between reinforcement learning and
+natural language understanding in Minecraft. It provides an RL environment where the goal
+of an agent is to build structures within a dedicated zone. The structures are described
+by natural language in the game’s chat.</p>
+<p>We thank creators of <a class="reference external" href="http://minerl.io">MineRL</a>, as our codebase depends heavily on their project.</p>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">iglu</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;IGLUSilentBuilder-v0&#39;</span><span class="p">,</span> <span class="n">max_steps</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="iglu-environment">
+<h1>IGLU Environment<a class="headerlink" href="#iglu-environment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="iglusilentbuilder-v0">
+<h2>IGLUSilentBuilder-v0<a class="headerlink" href="#iglusilentbuilder-v0" title="Permalink to this headline">¶</a></h2>
+<p>This environment is part of Silent Builder task of IGLU competition.
+The agent spawns at the center of building zone which is a <cite>11x9x11</cite>
+cuboid above blocks which are marked white. Each step the agent gets a pov image,
+an inventory state, a position, and the goal information which is described
+below. The agent can navigate inside the building zone, select block stack
+from the inventory and place/break blocks. The goal of the agent is to build
+the target structure using only the text of the conversation betwen human
+architect and builder taken from the dataset.</p>
+<div class="section" id="observation-space">
+<h3>Observation space<a class="headerlink" href="#observation-space" title="Permalink to this headline">¶</a></h3>
+<p>Observation space of silent builder consisits of five components</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Dict</span><span class="p">({</span>
+    <span class="s2">&quot;pov&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,)),</span>
+    <span class="s2">&quot;agentPos&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">-</span><span class="mi">90</span><span class="p">],</span>
+                    <span class="n">high</span><span class="o">=</span><span class="p">[</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+                    <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,)),</span>
+    <span class="s2">&quot;grid&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">)),</span>
+    <span class="s2">&quot;chat&quot;</span><span class="p">:</span> <span class="n">String</span><span class="p">()</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>First, <code class="docutils literal notranslate"><span class="pre">&quot;pov&quot;</span></code> is a <code class="docutils literal notranslate"><span class="pre">64x64</span></code> RGB first-person view image of the agent.
+In <code class="docutils literal notranslate"><span class="pre">&quot;inventory&quot;</span></code> there are stack counts for each of six block stacks:
+<cite>blue, yellow, green, orange, purple, red</cite>. At the start of the episode
+<cite>blue</cite> stack is active. The <code class="docutils literal notranslate"><span class="pre">&quot;agentPos&quot;</span></code> component is described by <cite>5</cite>
+numbers which are <cite>x, y, z</cite> coordinates and <cite>pitch, yaw</cite> angles.
+<code class="docutils literal notranslate"><span class="pre">&quot;grid&quot;</span></code> observation contains block ids of voxel grid captured from the building zone.
+Id <cite>-1</cite> coorresponds to <cite>air</cite> block and the rest of them are ordered as in the
+<code class="docutils literal notranslate"><span class="pre">&quot;inventory&quot;</span></code> observation. Finally, <code class="docutils literal notranslate"><span class="pre">&quot;chat&quot;</span></code> represents the conversation between
+the architect and the builder acquired from human-human interation which coorresponds
+to the current task.</p>
+<p>Additionally, the agent has access to target structure of the current task. It is
+stored inside <code class="docutils literal notranslate"><span class="pre">info</span></code> dictionary by <code class="docutils literal notranslate"><span class="pre">'target_grid'</span></code> key. The representation is the same as
+for <code class="docutils literal notranslate"><span class="pre">&quot;grid&quot;</span></code> observation component.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This observation space will not be used for evaluation in the Silent Builder task
+of the IGLU competition. For evaluation environment see <code class="docutils literal notranslate"><span class="pre">IGLUSilentBuilderVisual-v0</span></code></p>
+</div>
+</div>
+<div class="section" id="action-space">
+<h3>Action space<a class="headerlink" href="#action-space" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">IGLUSilentBuilder-v0</span></code> environment can be customized with three different action spaces.</p>
+<p>Human-level actions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Dict</span><span class="p">({</span>
+    <span class="s2">&quot;forward&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;back&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;left&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;right&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;jump&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;attack&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;camera&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,)),</span>
+    <span class="s2">&quot;hotbar&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>This action space is the same as that in <a class="reference external" href="http://minerl.io">MineRL</a> competition environments except there
+is <code class="docutils literal notranslate"><span class="pre">&quot;hotbar&quot;</span></code> selection commands added.</p>
+<p>Discrete coordinate actions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Dict</span><span class="p">({</span>
+    <span class="s2">&quot;move&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+    <span class="s2">&quot;strafe&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+    <span class="s2">&quot;jump&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;attack&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;camera&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,)),</span>
+    <span class="s2">&quot;hotbar&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>Following these actions, the agent would move over discrete positions
+coorresponding to centers of blocks.
+For navigation commands (<code class="docutils literal notranslate"><span class="pre">&quot;move&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;strafe&quot;</span></code>), there are 3 options
+which coorrespond to no-op, forward, and backward movement (no-op, right, and left in
+case of <code class="docutils literal notranslate"><span class="pre">&quot;strafe&quot;</span></code>). If <code class="docutils literal notranslate"><span class="pre">&quot;jump&quot;</span></code> <strong>action is non-zero alongsize the movement action,
+the jump would occur simultaneously with movement (as otherwise the agent would be unable
+to jump upstairs).</strong> Take this into account when designing your action space discretization.</p>
+<p>Absolute movement actions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Dict</span><span class="p">({</span>
+    <span class="s2">&quot;move_xyz&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,)),</span>
+    <span class="s2">&quot;camera&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,)),</span>
+    <span class="s2">&quot;attack&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;hotbar&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>This action space allows agent to fly freely inside the building zone without
+collisions (except with the ground). The rest components of the action space
+are the same as in the previous two spaces.</p>
+<p>To select a proper action space, one can simply pass the corresponding argument
+to the environment constructor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># For human level actions</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;IGLUSilentBuilder-v0&#39;</span><span class="p">,</span> <span class="n">action_space</span><span class="o">=</span><span class="s1">&#39;human-level&#39;</span><span class="p">)</span>
+<span class="c1"># For discrete coordinates actions</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;IGLUSilentBuilder-v0&#39;</span><span class="p">,</span> <span class="n">action_space</span><span class="o">=</span><span class="s1">&#39;discrete&#39;</span><span class="p">)</span>
+<span class="c1"># For absolute actions</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;IGLUSilentBuilder-v0&#39;</span><span class="p">,</span> <span class="n">action_space</span><span class="o">=</span><span class="s1">&#39;absolute&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The default value is <code class="docutils literal notranslate"><span class="pre">'human-level'</span></code>.</p>
+</div>
+<div class="section" id="tasks">
+<h3>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h3>
+<p>Each episode of the environment is parameterized by the task of the agent.
+Each task is represented by string containing the converation and target structure
+encoded into 3d voxel grid. All tasks are sampled from the dataset collected
+in <span id="id1">[<a class="reference internal" href="#id3" title="Anjali Narayan-Chen, Prashant Jayannavar, and Julia Hockenmaier. Collaborative dialogue in Minecraft. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, 5405–5415. Florence, Italy, July 2019. Association for Computational Linguistics. URL: https://www.aclweb.org/anthology/P19-1537.">1</a>]</span>. Each task has its unique id of the format
+<code class="docutils literal notranslate"><span class="pre">C*</span></code>.  On creation, the env loads all tasks from the dataset. Each <code class="docutils literal notranslate"><span class="pre">.reset</span></code> samples
+a new task from the current task set and makes it active.</p>
+<p>To load new set of tasks into the environment</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iglu.tasks</span> <span class="kn">import</span> <span class="n">TaskSet</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;IGLUSilentBuilder-v0&#39;</span><span class="p">)</span>
+<span class="n">env</span><span class="o">.</span><span class="n">update_taskset</span><span class="p">(</span><span class="n">TaskSet</span><span class="p">(</span><span class="n">preset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="s1">&#39;C2&#39;</span><span class="p">,</span> <span class="s1">&#39;C3&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>Additionally, we provide a different type of tasks for the agent. These tasks are generated randomly.
+Here are main parameters of <code class="docutils literal notranslate"><span class="pre">RandomTasks</span></code> class. It can be used as drop-in replacement for <code class="docutils literal notranslate"><span class="pre">TaskSet</span></code>.</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iglu.tasks.task_set.</span></span><span class="sig-name descname"><span class="pre">RandomTasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_blocks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height_levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_float</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>TaskSet that consists of number of randomly generated tasks</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_blocks</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – The maximal number of blocks in each task. Defaults to 3.</p></li>
+<li><p><strong>height_levels</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – How many height levels random blocks can occupy. Defaults to 1.</p></li>
+<li><p><strong>allow_float</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) – Whether to allow blocks to have the air below. Defaults to False.</p></li>
+<li><p><strong>max_dist</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – Maximum (Chebyshev) distance between two blocks. Defaults to 2.</p></li>
+<li><p><strong>num_colors</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – Maximum number of unique colors. Defaults to 1.</p></li>
+<li><p><strong>max_cache</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – If zero, each <cite>.sample_task</cite> will generate new task. Otherwise, the number of random tasks to cache. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Here is the full list of available goals:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iglu.tasks.task_set</span> <span class="kn">import</span> <span class="n">TaskSet</span>
+<span class="n">ts</span> <span class="o">=</span> <span class="n">TaskSet</span><span class="p">(</span><span class="n">preset</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;C</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">158</span><span class="p">)],</span> <span class="n">update_task_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">TaskSet</span><span class="o">.</span><span class="n">ALL</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C1: bell (38 blocks, 5 colors)
+C2: black-hole (20 blocks, 2 colors)
+C3: blue-original-L (3 blocks, 1 colors)
+C4: flower_new (17 blocks, 4 colors)
+C5: overlapping-chain-links (20 blocks, 2 colors)
+C6: rectangle-chain (40 blocks, 4 colors)
+C7: scissors (23 blocks, 2 colors)
+C8: table2 (12 blocks, 2 colors)
+C9: asterisk (33 blocks, 2 colors)
+C10: concentric_semicircles (21 blocks, 3 colors)
+C11: broken_heart (21 blocks, 2 colors)
+C12: diagonal-Ls (18 blocks, 6 colors)
+C13: eye (29 blocks, 3 colors)
+C14: diagonal-zigzag (16 blocks, 3 colors)
+C15: double_stairs (36 blocks, 4 colors)
+C16: bloody-sword (24 blocks, 4 colors)
+C17: orange-flat-original-L (3 blocks, 1 colors)
+C18: overlapping-reticles (12 blocks, 3 colors)
+C19: slide_with_arch (48 blocks, 3 colors)
+C20: rainbow-lasso (9 blocks, 6 colors)
+C21: spectacles (29 blocks, 2 colors)
+C22: smiley (6 blocks, 5 colors)
+C23: suspension_bridge (68 blocks, 4 colors)
+C24: cup (46 blocks, 4 colors)
+C25: music-notes (18 blocks, 2 colors)
+C26: rainbow-diagonal-stack (15 blocks, 6 colors)
+C27: funny-Ts (25 blocks, 4 colors)
+C28: duck (21 blocks, 2 colors)
+C29: tetris (20 blocks, 5 colors)
+C30: 3d-triangle (20 blocks, 6 colors)
+C31: hot (20 blocks, 3 colors)
+C32: bigger-original-L (5 blocks, 1 colors)
+C33: connected_diamonds_with_missing_blocks (14 blocks, 2 colors)
+C34: complex_five (13 blocks, 3 colors)
+C35: strange-triangles (20 blocks, 6 colors)
+C36: street_lamps (31 blocks, 3 colors)
+C37: embedded_fives (56 blocks, 6 colors)
+C38: l-shape
+C39: three-squares (24 blocks, 3 colors)
+C40: cross-stack (9 blocks, 6 colors)
+C41: multiple_concepts (19 blocks, 3 colors)
+C42: rubiks (18 blocks, 4 colors)
+C43: girl_with_frock (29 blocks, 3 colors)
+C44: hollow_diseased_rectangle (19 blocks, 4 colors)
+C45: u-3 (14 blocks, 2 colors)
+C46: wtf (11 blocks, 6 colors)
+C47: staircase (18 blocks, 3 colors)
+C48: umbrella (38 blocks, 4 colors)
+C49: letter-cube (36 blocks, 4 colors)
+C50: 3d-x_s (15 blocks, 3 colors)
+C51: interlocking-magnets (16 blocks, 4 colors)
+C52: hut_and_trees (31 blocks, 3 colors)
+C53: funny-cube (20 blocks, 4 colors)
+C54: 3d-diagonals (10 blocks, 3 colors)
+C55: chains (19 blocks, 3 colors)
+C56: color-wheel (25 blocks, 4 colors)
+C57: four-three (17 blocks, 2 colors)
+C58: ducks_in_pool (24 blocks, 2 colors)
+C59: parallel-bars (20 blocks, 4 colors)
+C60: diagonal-2 (20 blocks, 6 colors)
+C61: chair2 (19 blocks, 2 colors)
+C62: chair3 (32 blocks, 3 colors)
+C63: question (6 blocks, 1 colors)
+C64: torch (18 blocks, 2 colors)
+C65: superhero (15 blocks, 3 colors)
+C66: connected_triangles (30 blocks, 3 colors)
+C67: storm-cloud (25 blocks, 2 colors)
+C68: christmas-tree (25 blocks, 6 colors)
+C69: pickup_truck (38 blocks, 5 colors)
+C70: random_snake (29 blocks, 2 colors)
+C71: connected_rows_with_missing_blocks (15 blocks, 4 colors)
+C72: cat (37 blocks, 4 colors)
+C73: x_equals_y (18 blocks, 3 colors)
+C74: random_objects (14 blocks, 4 colors)
+C75: creative-five (11 blocks, 6 colors)
+C76: double_tripod (16 blocks, 5 colors)
+C77: 3d-maze (49 blocks, 5 colors)
+C78: random_objects_2 (24 blocks, 3 colors)
+C79: connected_crosses (25 blocks, 4 colors)
+C80: lunging-man (17 blocks, 4 colors)
+C81: cube-x (17 blocks, 3 colors)
+C82: eiffel-tower (41 blocks, 4 colors)
+C83: pyramid-table (33 blocks, 4 colors)
+C84: trident (13 blocks, 2 colors)
+C85: upvote (9 blocks, 2 colors)
+C86: butterfly (24 blocks, 3 colors)
+C87: sickles (10 blocks, 1 colors)
+C88: sun_and_birds (19 blocks, 2 colors)
+C89: m-and-m (23 blocks, 2 colors)
+C90: wind-farm (30 blocks, 4 colors)
+C91: castle (41 blocks, 5 colors)
+C92: cherries (16 blocks, 2 colors)
+C93: L-back-to-back (8 blocks, 2 colors)
+C94: disappearing-tunnel (35 blocks, 6 colors)
+C95: chimney (26 blocks, 3 colors)
+C96: four-corners (16 blocks, 4 colors)
+C97: omega-u-corner (14 blocks, 2 colors)
+C98: insects (24 blocks, 6 colors)
+C99: keys (35 blocks, 2 colors)
+C100: wannabe_olympic_rings (42 blocks, 4 colors)
+C101: connected_tunnels (39 blocks, 3 colors)
+C102: man_on_broom (17 blocks, 4 colors)
+C103: rotating_chair (19 blocks, 1 colors)
+C104: clothesline (36 blocks, 2 colors)
+C105: lol_ethylene (34 blocks, 3 colors)
+C106: minimal_tree (19 blocks, 2 colors)
+C107: colorful_alien (20 blocks, 3 colors)
+C108: illinois-i (29 blocks, 2 colors)
+C109: waving-flag (11 blocks, 2 colors)
+C110: color-loop (16 blocks, 4 colors)
+C111: color-cube (16 blocks, 4 colors)
+C112: color-spiral (33 blocks, 5 colors)
+C113: numbers (43 blocks, 4 colors)
+C114: e3 (18 blocks, 2 colors)
+C115: hollow_stools (23 blocks, 4 colors)
+C116: diagonal_arch_and_triangle (17 blocks, 4 colors)
+C117: pyramid_with_horns (20 blocks, 4 colors)
+C118: random_objects_3 (12 blocks, 2 colors)
+C119: funny_chair (38 blocks, 3 colors)
+C120: h_1_plus (14 blocks, 2 colors)
+C121: 2d_giraffe (19 blocks, 3 colors)
+C122: funny_bird (25 blocks, 4 colors)
+C123: footballer (26 blocks, 3 colors)
+C124: connected_triangles_2 (28 blocks, 3 colors)
+C125: fail_hourglass (22 blocks, 3 colors)
+C126: teapot (20 blocks, 2 colors)
+C127: backpack (26 blocks, 3 colors)
+C128: weird_chain (16 blocks, 4 colors)
+C129: rhombuses_with_ring (34 blocks, 3 colors)
+C130: differently_oriented_squares (24 blocks, 2 colors)
+C131: table_with_objects (35 blocks, 6 colors)
+C132: diagonal_slab_with_pattern (20 blocks, 2 colors)
+C133: adjacent_gates (28 blocks, 3 colors)
+C134: parachute (28 blocks, 6 colors)
+C135: bent-arrow (13 blocks, 1 colors)
+C136: waving-man (18 blocks, 4 colors)
+C137: no-u-turn (39 blocks, 2 colors)
+C138: color-Us (42 blocks, 6 colors)
+C139: minimalistic-mouse (16 blocks, 3 colors)
+C140: weird-rows (31 blocks, 4 colors)
+C141: dancing-banana (20 blocks, 4 colors)
+C142: potted-weeds (28 blocks, 3 colors)
+C143: drooping-flower (21 blocks, 5 colors)
+C144: curly-R (20 blocks, 3 colors)
+C145: pulse (19 blocks, 1 colors)
+C146: boxy-to-diagonal (17 blocks, 5 colors)
+C147: pi (26 blocks, 4 colors)
+C148: headphones (40 blocks, 4 colors)
+C149: drink-with-umbrella (37 blocks, 4 colors)
+C150: checkerboard (16 blocks, 6 colors)
+C151: hanger (16 blocks, 3 colors)
+C152: ballerina (25 blocks, 3 colors)
+C153: cursive-ok (27 blocks, 2 colors)
+C154: gateway-to-stairs (52 blocks, 6 colors)
+C155: sickles-difficult (24 blocks, 2 colors)
+C156: sun_and_birds-difficult (24 blocks, 2 colors)
+C157: butterfly-difficult (24 blocks, 3 colors)
+</pre></div>
+</div>
+</div>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<p id="id2"><dl class="citation">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Anjali Narayan-Chen, Prashant Jayannavar, and Julia Hockenmaier. Collaborative dialogue in Minecraft. In <em>Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</em>, 5405–5415. Florence, Italy, July 2019. Association for Computational Linguistics. URL: <a class="reference external" href="https://www.aclweb.org/anthology/P19-1537">https://www.aclweb.org/anthology/P19-1537</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+</div>
+<div class="section" id="package-reference">
+<h1>Package reference<a class="headerlink" href="#package-reference" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="auto/iglu.html">iglu package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#module-iglu.const">iglu.const module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#module-iglu.env">iglu.env module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#module-iglu.handlers">iglu.handlers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#module-iglu">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auto/iglu.tasks.html">iglu.tasks package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.tasks.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.tasks.html#module-iglu.tasks.load">iglu.tasks.load module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.tasks.html#module-iglu.tasks.task">iglu.tasks.task module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.tasks.html#module-iglu.tasks.task_set">iglu.tasks.task_set module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.tasks.html#module-iglu.tasks">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auto/modules.html">iglu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html">iglu package</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="auto/iglu.html" class="btn btn-neutral float-right" title="iglu package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, IGLU team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

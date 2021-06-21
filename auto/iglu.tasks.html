@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>iglu.tasks package &mdash; IGLU  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="iglu" href="modules.html" />
+    <link rel="prev" title="iglu package" href="iglu.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> IGLU
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="iglu.html">iglu package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">iglu.tasks package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-iglu.tasks.load">iglu.tasks.load module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-iglu.tasks.task">iglu.tasks.task module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-iglu.tasks.task_set">iglu.tasks.task_set module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-iglu.tasks">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">iglu</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IGLU</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="iglu.html">iglu package</a> &raquo;</li>
+        
+      <li>iglu.tasks package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/auto/iglu.tasks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="iglu-tasks-package">
+<h1>iglu.tasks package<a class="headerlink" href="#iglu-tasks-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-iglu.tasks.load">
+<span id="iglu-tasks-load-module"></span><h2>iglu.tasks.load module<a class="headerlink" href="#module-iglu.tasks.load" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="iglu.tasks.load.download_file_from_google_drive">
+<span class="sig-prename descclassname"><span class="pre">iglu.tasks.load.</span></span><span class="sig-name descname"><span class="pre">download_file_from_google_drive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_prefix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.load.download_file_from_google_drive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iglu.tasks.load.get_confirm_token">
+<span class="sig-prename descclassname"><span class="pre">iglu.tasks.load.</span></span><span class="sig-name descname"><span class="pre">get_confirm_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.load.get_confirm_token" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iglu.tasks.load.save_response_content">
+<span class="sig-prename descclassname"><span class="pre">iglu.tasks.load.</span></span><span class="sig-name descname"><span class="pre">save_response_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_prefix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.load.save_response_content" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-iglu.tasks.task">
+<span id="iglu-tasks-task-module"></span><h2>iglu.tasks.task module<a class="headerlink" href="#module-iglu.tasks.task" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="iglu.tasks.task.Task">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iglu.tasks.task.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_grid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.task.Task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="iglu.tasks.task.Task.maximal_intersection">
+<span class="sig-name descname"><span class="pre">maximal_intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.task.Task.maximal_intersection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-iglu.tasks.task_set">
+<span id="iglu-tasks-task-set-module"></span><h2>iglu.tasks.task_set module<a class="headerlink" href="#module-iglu.tasks.task_set" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="iglu.tasks.task_set.RandomTasks">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iglu.tasks.task_set.</span></span><span class="sig-name descname"><span class="pre">RandomTasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_blocks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height_levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_float</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.task_set.RandomTasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iglu.tasks.task_set.TaskSet" title="iglu.tasks.task_set.TaskSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">iglu.tasks.task_set.TaskSet</span></code></a></p>
+<p>TaskSet that consists of number of randomly generated tasks</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_blocks</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – The maximal number of blocks in each task. Defaults to 3.</p></li>
+<li><p><strong>height_levels</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – How many height levels random blocks can occupy. Defaults to 1.</p></li>
+<li><p><strong>allow_float</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) – Whether to allow blocks to have the air below. Defaults to False.</p></li>
+<li><p><strong>max_dist</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – Maximum (Chebyshev) distance between two blocks. Defaults to 2.</p></li>
+<li><p><strong>num_colors</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – Maximum number of unique colors. Defaults to 1.</p></li>
+<li><p><strong>max_cache</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) – If zero, each <cite>.sample_task</cite> will generate new task. Otherwise, the number of random tasks to cache. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="iglu.tasks.task_set.RandomTasks.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.task_set.RandomTasks.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iglu.tasks.task_set.RandomTasks.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.task_set.RandomTasks.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iglu.tasks.task_set.RandomTasks.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.task_set.RandomTasks.sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iglu.tasks.task_set.RandomTasks.sample_task">
+<span class="sig-name descname"><span class="pre">sample_task</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.task_set.RandomTasks.sample_task" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iglu.tasks.task_set.RandomTasks.set_task">
+<span class="sig-name descname"><span class="pre">set_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.task_set.RandomTasks.set_task" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iglu.tasks.task_set.TaskSet">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">iglu.tasks.task_set.</span></span><span class="sig-name descname"><span class="pre">TaskSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'simplest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_task_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.task_set.TaskSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iglu.tasks.task_set.TaskSet.ALL">
+<span class="sig-name descname"><span class="pre">ALL</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#iglu.tasks.task_set.TaskSet.ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iglu.tasks.task_set.TaskSet.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.task_set.TaskSet.sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iglu.tasks.task_set.TaskSet.subset">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_set</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iglu.tasks.task_set.TaskSet.subset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-iglu.tasks">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-iglu.tasks" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="modules.html" class="btn btn-neutral float-right" title="iglu" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="iglu.html" class="btn btn-neutral float-left" title="iglu package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, IGLU team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

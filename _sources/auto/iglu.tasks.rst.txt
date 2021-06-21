@@ -1,0 +1,37 @@
+iglu.tasks package
+==================
+
+Submodules
+----------
+
+iglu.tasks.load module
+----------------------
+
+.. automodule:: iglu.tasks.load
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iglu.tasks.task module
+----------------------
+
+.. automodule:: iglu.tasks.task
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iglu.tasks.task\_set module
+---------------------------
+
+.. automodule:: iglu.tasks.task_set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: iglu.tasks
+   :members:
+   :undoc-members:
+   :show-inheritance:

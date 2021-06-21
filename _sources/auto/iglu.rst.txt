@@ -1,0 +1,45 @@
+iglu package
+============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   iglu.tasks
+
+Submodules
+----------
+
+iglu.const module
+-----------------
+
+.. automodule:: iglu.const
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iglu.env module
+---------------
+
+.. automodule:: iglu.env
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iglu.handlers module
+--------------------
+
+.. automodule:: iglu.handlers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: iglu
+   :members:
+   :undoc-members:
+   :show-inheritance:
