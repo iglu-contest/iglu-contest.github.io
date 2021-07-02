@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>IGLU Environments &mdash; IGLU  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tasking the environment" href="tasks.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IGLU
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">IGLU Environments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#iglusilentbuilder-v0">IGLUSilentBuilder-v0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#observation-space">Observation space</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#action-space">Action space</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#iglusilentbuildervisual-v0">IGLUSilentBuilderVisual-v0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Observation space</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Action space</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reward-calculation">Reward calculation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tasks.html">Tasking the environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">IGLU API reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="auto/iglu.html">iglu package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto/iglu.tasks.html">iglu.tasks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto/modules.html">iglu</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IGLU</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>IGLU Environments</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/envs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="iglu-environments">
+<h1>IGLU Environments<a class="headerlink" href="#iglu-environments" title="Permalink to this headline">¶</a></h1>
+<p>All environments provided here are created to be used for the Silent builder task
+of IGLU competition. In the Silent builder task, the goal is to create an agent that
+has access to the past conversation that led to some structure built by human builder.</p>
+<div class="section" id="iglusilentbuilder-v0">
+<h2>IGLUSilentBuilder-v0<a class="headerlink" href="#iglusilentbuilder-v0" title="Permalink to this headline">¶</a></h2>
+<p>The agent spawns at the center of building zone which is a <cite>11x9x11</cite>
+cuboid above the blocks which are marked white. Each step the agent gets a pov image,
+an inventory state, a position, and the goal information which is described
+below. The agent can navigate inside the building zone, select block stack
+from the inventory and place/break blocks. The goal of the agent is to build
+the target structure using only the text of the conversation of human
+architect with human builder taken from the dataset.</p>
+<div class="section" id="observation-space">
+<h3>Observation space<a class="headerlink" href="#observation-space" title="Permalink to this headline">¶</a></h3>
+<p>Observation space of silent builder consisits of six components</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Dict</span><span class="p">({</span>
+    <span class="s2">&quot;pov&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,)),</span>
+    <span class="s2">&quot;agentPos&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="o">-</span><span class="mi">90</span><span class="p">],</span>
+                    <span class="n">high</span><span class="o">=</span><span class="p">[</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+                    <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,)),</span>
+    <span class="s2">&quot;grid&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">)),</span>
+    <span class="s2">&quot;compass&quot;</span><span class="p">:</span> <span class="n">Dict</span><span class="p">({</span><span class="s2">&quot;angle&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">())}),</span>
+    <span class="s2">&quot;chat&quot;</span><span class="p">:</span> <span class="n">String</span><span class="p">()</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>First, <code class="docutils literal notranslate"><span class="pre">&quot;pov&quot;</span></code> is a <code class="docutils literal notranslate"><span class="pre">64x64</span></code> RGB first-person view image of the agent.
+In <code class="docutils literal notranslate"><span class="pre">&quot;inventory&quot;</span></code> there are stack counts for each of six block stacks:
+<cite>blue, yellow, green, orange, purple, red</cite>. At the start of the episode
+<cite>blue</cite> stack is active. The <code class="docutils literal notranslate"><span class="pre">&quot;agentPos&quot;</span></code> component is described by <cite>5</cite>
+numbers which are <cite>x, y, z</cite> coordinates and <cite>pitch, yaw</cite> angles.
+<code class="docutils literal notranslate"><span class="pre">&quot;grid&quot;</span></code> observation contains block ids of voxel grid captured from the building zone.
+Id <cite>-1</cite> coorresponds to <cite>air</cite> block and the rest of them are ordered as in the
+<code class="docutils literal notranslate"><span class="pre">&quot;inventory&quot;</span></code> observation. <code class="docutils literal notranslate"><span class="pre">&quot;compass&quot;</span></code> component is provided since there is no information
+about the dlobal direction inside the images (the building zone looks the same at each direction).
+Finally, <code class="docutils literal notranslate"><span class="pre">&quot;chat&quot;</span></code> represents the conversation between
+the architect and the builder acquired from human-human interation which coorresponds
+to the current task.</p>
+<p>Additionally, the agent has access to target structure of the current task. It is
+stored inside <code class="docutils literal notranslate"><span class="pre">info</span></code> dictionary by <code class="docutils literal notranslate"><span class="pre">'target_grid'</span></code> key. The representation is the same as
+for <code class="docutils literal notranslate"><span class="pre">&quot;grid&quot;</span></code> observation component.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This observation space will not be used for evaluation in the Silent Builder task
+of the IGLU competition. For the evaluation environment, see <code class="docutils literal notranslate"><span class="pre">IGLUSilentBuilderVisual-v0</span></code>.</p>
+</div>
+</div>
+<div class="section" id="action-space">
+<h3>Action space<a class="headerlink" href="#action-space" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">IGLUSilentBuilder-v0</span></code> environment can be customized with three different action spaces.</p>
+<p>Human-level actions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Dict</span><span class="p">({</span>
+    <span class="s2">&quot;forward&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;back&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;left&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;right&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;jump&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;attack&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;camera&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,)),</span>
+    <span class="s2">&quot;hotbar&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>This action space is the same as that in <a class="reference external" href="http://minerl.io">MineRL</a> competition environments except there
+are <code class="docutils literal notranslate"><span class="pre">&quot;hotbar&quot;</span></code> selection commands added. <code class="docutils literal notranslate"><span class="pre">&quot;hotbar&quot;</span></code> commands correspond to the selection
+of 6 block stacks of different colours + one action that does nothing with the selected stack.</p>
+<p>Discrete coordinate actions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Dict</span><span class="p">({</span>
+    <span class="s2">&quot;move&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+    <span class="s2">&quot;strafe&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+    <span class="s2">&quot;jump&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;attack&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;camera&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,)),</span>
+    <span class="s2">&quot;hotbar&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>Following these actions, the agent would move over discrete positions
+coorresponding to centers of blocks.
+For navigation commands (<code class="docutils literal notranslate"><span class="pre">&quot;move&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;strafe&quot;</span></code>), there are 3 options
+which coorrespond to no-op, forward, and backward movement (no-op, right, and left in
+case of <code class="docutils literal notranslate"><span class="pre">&quot;strafe&quot;</span></code>). If <code class="docutils literal notranslate"><span class="pre">&quot;jump&quot;</span></code> <strong>action is non-zero alongsize the movement action,
+the jump would occur simultaneously with movement (as otherwise the agent would be unable
+to jump upstairs).</strong> Take this into account when designing your action space discretization.</p>
+<p>Note that states are changed correspondingly immidiately after applying each of these actions.</p>
+<p>Continuous movement actions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Dict</span><span class="p">({</span>
+    <span class="s2">&quot;move_x&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">()),</span>
+    <span class="s2">&quot;move_y&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">()),</span>
+    <span class="s2">&quot;move_z&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">()),</span>
+    <span class="s2">&quot;camera&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,)),</span>
+    <span class="s2">&quot;attack&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;use&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;hotbar&quot;</span><span class="p">:</span> <span class="n">Discrete</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>This action space allows agent to fly freely inside the building zone without
+collisions (except with the ground and invisible walls surrounding the building zone).
+The rest components of the action space are the same as in the previous two spaces.</p>
+<p>Note that due to how Minecraft processes that kind of events, states are changed with the delay of 2-4 actions.</p>
+<p>To select a proper action space, one can simply pass the corresponding argument
+to the environment constructor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># For human level actions</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;IGLUSilentBuilder-v0&#39;</span><span class="p">,</span> <span class="n">action_space</span><span class="o">=</span><span class="s1">&#39;human-level&#39;</span><span class="p">)</span>
+<span class="c1"># For discrete coordinates movement</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;IGLUSilentBuilder-v0&#39;</span><span class="p">,</span> <span class="n">action_space</span><span class="o">=</span><span class="s1">&#39;discrete&#39;</span><span class="p">)</span>
+<span class="c1"># For continuous coordinates movement</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;IGLUSilentBuilder-v0&#39;</span><span class="p">,</span> <span class="n">action_space</span><span class="o">=</span><span class="s1">&#39;continuous&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The default value is <code class="docutils literal notranslate"><span class="pre">'human-level'</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To speed up the environment, iglu doesn’t reload the whole Minecraft mission
+at each <code class="docutils literal notranslate"><span class="pre">env.reset()</span></code> (as it takes 3-5 seconds). Instead, it cleans up the building
+zone, teleports the agent into the initial position refilling its inventory. Such
+“fake reset” operation costs just one environment step. But this is an experimental feature
+that may work unstable, leading to unwanted bugs with minerl socket interaction.
+If you experience such kind of problems, you can disable fake reset using
+<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">IGLU_DISABLE_FAKE_RESET=1</span></code> before running script.</p>
+</div>
+</div>
+</div>
+<div class="section" id="iglusilentbuildervisual-v0">
+<h2>IGLUSilentBuilderVisual-v0<a class="headerlink" href="#iglusilentbuildervisual-v0" title="Permalink to this headline">¶</a></h2>
+<p>This environment will be used during the evaluation of the solutions
+to Silent Builder task of IGLU competition. It provides a reduced observation
+space and the same actions.</p>
+<div class="section" id="id1">
+<h3>Observation space<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Observation space of visual silent builder consisits of four components</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Dict</span><span class="p">({</span>
+    <span class="s2">&quot;pov&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+    <span class="s2">&quot;inventory&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,)),</span>
+    <span class="s2">&quot;compass&quot;</span><span class="p">:</span> <span class="n">Dict</span><span class="p">({</span><span class="s2">&quot;angle&quot;</span><span class="p">:</span> <span class="n">Box</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">())}),</span>
+    <span class="s2">&quot;chat&quot;</span><span class="p">:</span> <span class="n">String</span><span class="p">()</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>Each of them was described in the previous section.</p>
+</div>
+<div class="section" id="id2">
+<h3>Action space<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>In this environment there is again a freedom to select any action space you want.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># For human level actions</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;IGLUSilentBuilderVisual-v0&#39;</span><span class="p">,</span> <span class="n">action_space</span><span class="o">=</span><span class="s1">&#39;human-level&#39;</span><span class="p">)</span>
+<span class="c1"># For discrete coordinates movement</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;IGLUSilentBuilderVisual-v0&#39;</span><span class="p">,</span> <span class="n">action_space</span><span class="o">=</span><span class="s1">&#39;discrete&#39;</span><span class="p">)</span>
+<span class="c1"># For continuous coordinates movement</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;IGLUSilentBuilderVisual-v0&#39;</span><span class="p">,</span> <span class="n">action_space</span><span class="o">=</span><span class="s1">&#39;continuous&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The default value is <code class="docutils literal notranslate"><span class="pre">'human-level'</span></code>.</p>
+</div>
+</div>
+<div class="section" id="reward-calculation">
+<h2>Reward calculation<a class="headerlink" href="#reward-calculation" title="Permalink to this headline">¶</a></h2>
+<p>Each step, the agent receives a reward. Its value is determined by the current
+goal structure and the one built so far. The reward is determined regardless of
+global spatial position of currently placed blocks, it only takes into account
+how much the built blocks are similar to the target structure. To make it possible,
+at each step we calculate the intersection between the built and the target structures for each
+spatial translation within the horizontal plane and rotation around the vertical axis.
+Then we take the maximal intersection value among all translation and rotations.
+To calculate the reward, we compare the maximal intersection size from the current step
+with the one from the previous step. We reward the agent with <code class="docutils literal notranslate"><span class="pre">2</span></code> for the increase of the
+maximal intersection size, with <code class="docutils literal notranslate"><span class="pre">-2</span></code> for the decrease of the maximal intersection size, and
+with <code class="docutils literal notranslate"><span class="pre">1</span></code>/<code class="docutils literal notranslate"><span class="pre">-1</span></code> for removing/placing a block without a change of the maximal intersection size.</p>
+<p>In the image below, there is an example of L-shaped target and two blocks placed
+diagonally. Despite the target is somewhere at the center of the zone, it fully
+covers two diagonal blocks (for some spatial alignment) forcing the agent to complete the structure where they
+started placing blocks.</p>
+<a class="reference internal image-reference" href="_images/intersections.png"><img alt="" src="_images/intersections.png" style="width: 365.4px; height: 350.09999999999997px;" /></a>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tasks.html" class="btn btn-neutral float-right" title="Tasking the environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, IGLU team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

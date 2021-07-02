@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>IGLU: Interactive Grounded Language Understanding in Minecraft &mdash; IGLU  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> IGLU
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="envs.html">IGLU Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tasks.html">Tasking the environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">IGLU API reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="auto/iglu.html">iglu package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto/iglu.tasks.html">iglu.tasks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto/modules.html">iglu</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">IGLU</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>IGLU: Interactive Grounded Language Understanding in Minecraft</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="iglu-interactive-grounded-language-understanding-in-minecraft">
+<h1>IGLU: Interactive Grounded Language Understanding in Minecraft<a class="headerlink" href="#iglu-interactive-grounded-language-understanding-in-minecraft" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/bell.png"><img alt="" src="_images/bell.png" style="width: 120.0px; height: 120.0px;" /></a>
+<a class="reference internal image-reference" href="_images/L.png"><img alt="" src="_images/L.png" style="width: 120.0px; height: 120.0px;" /></a>
+<a class="reference internal image-reference" href="_images/heart.png"><img alt="" src="_images/heart.png" style="width: 120.0px; height: 120.0px;" /></a>
+<a class="reference internal image-reference" href="_images/Ls.png"><img alt="" src="_images/Ls.png" style="width: 120.0px; height: 120.0px;" /></a>
+<div class="section" id="what-is-iglu">
+<h2>What is IGLU?<a class="headerlink" href="#what-is-iglu" title="Permalink to this headline">¶</a></h2>
+<p>IGLU is a research project aimed at bridging the gap between reinforcement learning and
+natural language understanding in Minecraft as a collaborative environment. It provides the RL environment where the goal
+of an agent is to build structures within a dedicated zone. The structures are described
+by natural language in the game’s chat.</p>
+<a class="reference internal image-reference" href="_images/dialog_example.png"><img alt="" src="_images/dialog_example.png" style="width: 514.0px; height: 295.5px;" /></a>
+<p>The task represents a cooperative asymmetric task that involves two participants: the architect and the builder.
+The architect is provided with a target structure that needs to be built by the builder.
+The architect provides instructions to the builder on how to create the target structure and
+the builder can ask clarifying questions to the architect if an instruction is unclear.
+This dialog happens by means of a chat interface.</p>
+<p>We provide the <code class="docutils literal notranslate"><span class="pre">iglu</span></code> python package where we implemented the <a class="reference external" href="https://gym.openai.com/">gym</a> environment for creation
+artificial builder agents.</p>
+<p>We thank creators of <a class="reference external" href="http://minerl.io">MineRL</a>, as our codebase depends heavily on their project.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#global">Global</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#docker">Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="envs.html">IGLU Environments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="envs.html#iglusilentbuilder-v0">IGLUSilentBuilder-v0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="envs.html#iglusilentbuildervisual-v0">IGLUSilentBuilderVisual-v0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="envs.html#reward-calculation">Reward calculation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tasks.html">Tasking the environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tasks.html#random-tasks">Random tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tasks.html#custom-tasks">Custom tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tasks.html#minecraft-dialogue-dataset">Minecraft dialogue dataset</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="package-reference">
+<h1>Package reference<a class="headerlink" href="#package-reference" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">IGLU API reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="auto/iglu.html">iglu package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#module-iglu.const">iglu.const module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#module-iglu.env">iglu.env module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#module-iglu.handlers">iglu.handlers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html#module-iglu">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auto/iglu.tasks.html">iglu.tasks package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.tasks.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.tasks.html#module-iglu.tasks.load">iglu.tasks.load module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.tasks.html#module-iglu.tasks.task">iglu.tasks.task module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.tasks.html#module-iglu.tasks.task_set">iglu.tasks.task_set module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.tasks.html#module-iglu.tasks">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auto/modules.html">iglu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="auto/iglu.html">iglu package</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, IGLU team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
