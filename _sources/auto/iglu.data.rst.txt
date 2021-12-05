@@ -1,0 +1,61 @@
+iglu.data package
+=================
+
+Submodules
+----------
+
+iglu.data.adapter module
+------------------------
+
+.. automodule:: iglu.data.adapter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iglu.data.common module
+-----------------------
+
+.. automodule:: iglu.data.common
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iglu.data.download module
+-------------------------
+
+.. automodule:: iglu.data.download
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iglu.data.parse module
+----------------------
+
+.. automodule:: iglu.data.parse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iglu.data.pipeline module
+-------------------------
+
+.. automodule:: iglu.data.pipeline
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iglu.data.render module
+-----------------------
+
+.. automodule:: iglu.data.render
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: iglu.data
+   :members:
+   :undoc-members:
+   :show-inheritance:
